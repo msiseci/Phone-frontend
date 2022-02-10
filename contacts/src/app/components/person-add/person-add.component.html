@@ -1,0 +1,62 @@
+<div class = "content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-body">
+          <form [formGroup]="personAddForm">
+            <div class="mb-3">
+              <label for="personName">İsim</label>
+              <div class="form-group">
+              <input type="text"
+              [(ngModel)]="person.personName"
+              id="personName"
+              formControlName="personName" class="form-control"
+              placeholder="İsim giriniz."/>
+              </div>
+            </div>
+         
+          <div class="mb-3">
+            <label for="personSurname">Soyisim</label>
+            <div class="form-group">
+              <input type="text"
+              id="personSurname"
+              [(ngModel)]="person.personSurname"
+              formControlName="personSurname" class="form-control"
+              placeholder="Soyisim giriniz."/>
+            </div>
+          </div>
+        
+          <div class="mb-3">
+            <label for="PhoneNumber">Telefon Numarası</label>
+            <div class="form-group">
+              <input type="text"
+              [(ngModel)]="person.phoneNumber"
+              id="phoneNumber"
+              formControlName="phoneNumber" class="form-control"
+              placeholder="Telefon Numarası giriniz."/>
+            </div>
+          </div>
+        
+       
+          <div class="mb-3">
+              
+            <label for="personEmail">Mail</label>
+            <div class="form-group">
+            <input type="text"
+            id="personMail"
+            [(ngModel)]="person.personMail"
+            formControlName="personMail" class="form-control"
+            placeholder="Mail adresi giriniz."/>
+            </div>
+          </div>
+     
+          </form>
+  
+        </div>
+        <div class="card-footer">
+        <button class="btn btn-fill btn-primary" (click)="add()"> {{person.personId==0? "Ekle":"Güncelle"}} </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
